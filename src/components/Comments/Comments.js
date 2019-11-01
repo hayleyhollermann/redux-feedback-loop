@@ -10,7 +10,7 @@ class Comments extends Component {
 
   setComments = (event) => {
     this.setState({
-      rating: event.target.value
+      comments: event.target.value
     })
   }
 
@@ -32,6 +32,7 @@ class Comments extends Component {
                 NEXT
               </button>
           </div>
+        <pre>{JSON.stringify(this.state, null, 2)}</pre>
       </div>
     );
   }

@@ -8,15 +8,19 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 // Reducers
-const feedbackQuestions = (state = [], action) => {
+const feedbackQuestions = (state = {}, action) => {
   if (action.type === 'FEELING'){
     console.log('feeling reducer');
+    return {...state, feeling: action.payload}
   } else if (action.type === 'UNDERSTANDING'){
     console.log('understanding reducer');
+    return {...state, understanding: action.payload}
   } else if (action.type === 'SUPPORTED'){
     console.log('understanding supported');
+    return {...state, support: action.payload}
   } else if (action.type === 'COMMENTS'){
     console.log('understanding comments');
+    return {...state, comments: action.payload}
   } 
   return state;
 }
