@@ -6,18 +6,22 @@ import {withRouter} from 'react-router-dom';
 class Feeling extends Component {
   state = {
     rating: '',
+    complete: false,
   }
 
   setRating = (event) => {
     this.setState({
-      rating: event.target.value
+      rating: event.target.value,
+      complete: true,
     })
   }
 
   handleClick = () => {
     console.log('add rating in Feeling');
     this.props.dispatch({type: 'FEELING', payload: this.state.rating});
-    this.props.history.push('/understanding');
+    if (this.state.complete){
+      this.props.history.push('/understanding');
+    }
   }
 
   render() {
@@ -29,6 +33,7 @@ class Feeling extends Component {
             <p>Feeling?</p>
             {/* <input type="number" onChange={this.setRating}/> */}
             <select onChange={this.setRating}>
+              <option> </option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
