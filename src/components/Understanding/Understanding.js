@@ -16,7 +16,8 @@ class Understanding extends Component {
 
   handleClick = () => {
     console.log('add rating in Understanding');
-    
+    this.props.dispatch({type: 'UNDERSTANDING', payload: this.state.rating})
+
   }
 
   render() {

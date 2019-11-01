@@ -16,7 +16,8 @@ class Supported extends Component {
 
   handleClick = () => {
     console.log('add rating in Support');
-    
+    this.props.dispatch({type: 'SUPPORTED', payload: this.state.rating})
+
   }
 
   render() {

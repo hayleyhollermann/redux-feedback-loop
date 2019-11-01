@@ -16,7 +16,7 @@ class Feeling extends Component {
 
   handleClick = () => {
     console.log('add rating in Feeling');
-    
+    this.props.dispatch({type: 'FEELING', payload: this.state.rating})
   }
 
   render() {

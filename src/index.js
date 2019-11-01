@@ -8,7 +8,18 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 // Reducers
-
+const feedbackQuestions = (state = [], action) => {
+  if (action.type === 'FEELING'){
+    console.log('feeling reducer');
+  } else if (action.type === 'UNDERSTANDING'){
+    console.log('understanding reducer');
+  } else if (action.type === 'SUPPORTED'){
+    console.log('understanding supported');
+  } else if (action.type === 'COMMENTS'){
+    console.log('understanding comments');
+  } 
+  return state;
+}
 
 
 
@@ -16,6 +27,7 @@ import logger from 'redux-logger';
 // Redux State / Store
 const reduxStore = createStore(
   combineReducers({
+    feedbackQuestions,
     // add reducers
   }),
     applyMiddleware(logger)
