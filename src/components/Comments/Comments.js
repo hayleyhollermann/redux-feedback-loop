@@ -27,7 +27,7 @@ class Comments extends Component {
         <h2>Any comments you want to leave?</h2>
           <div>
               <p>Comments</p>
-              <input type="text" onChange={this.setComments}/>
+              <input type="text" onChange={this.setComments} placeholder="optional"/>
               <button onClick={this.handleClick}>
                 NEXT
               </button>
