@@ -26,8 +26,15 @@ class Understanding extends Component {
       <div>
         <h2>How well are you understanding the content?</h2>
           <div>
-              <p>Understanding?</p>
-              <input type="number" onChange={this.setRating}/>
+            <p>Understanding?</p>
+              {/* <input type="number" onChange={this.setRating}/> */}
+            <select onChange={this.setRating}>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
               <button onClick={this.handleClick}>
                 NEXT
               </button>

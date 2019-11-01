@@ -25,11 +25,18 @@ class Feeling extends Component {
       <div>
           <h2>How are you feeling today?</h2>
           <div>
-              <p>Feeling?</p>
-              <input type="number" onChange={this.setRating}/>
-              <button onClick={this.handleClick}>
-                NEXT
-              </button>
+            <p>Feeling?</p>
+            {/* <input type="number" onChange={this.setRating}/> */}
+            <select onChange={this.setRating}>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <button onClick={this.handleClick}>
+              NEXT
+            </button>
           </div>
           <pre>{JSON.stringify(this.state, null, 2)}</pre>
       </div>
