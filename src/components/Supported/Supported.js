@@ -4,6 +4,20 @@ import {withRouter} from 'react-router-dom';
 
 
 class Supported extends Component {
+  state = {
+    rating: '',
+  }
+  
+  setRating = (event) => {
+    this.setState({
+      rating: event.target.value
+    })
+  }
+
+  handleClick = () => {
+    console.log('add rating in Support');
+    
+  }
 
   render() {
 
@@ -12,11 +26,12 @@ class Supported extends Component {
         <h2>How well are you being supported?</h2>
           <div>
               <p>Support?</p>
-              <input type="number"/>
-              <button>
+              <input type="number" onChange={this.setRating}/>
+              <button onClick={this.handleClick}>
                 NEXT
               </button>
           </div>
+        <pre>{JSON.stringify(this.state, null, 2)}</pre>
       </div>
     );
   }

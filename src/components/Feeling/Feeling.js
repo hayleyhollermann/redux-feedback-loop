@@ -4,6 +4,20 @@ import {withRouter} from 'react-router-dom';
 
 
 class Feeling extends Component {
+  state = {
+    rating: '',
+  }
+
+  setRating = (event) => {
+    this.setState({
+      rating: event.target.value
+    })
+  }
+
+  handleClick = () => {
+    console.log('add rating in Feeling');
+    
+  }
 
   render() {
 
@@ -12,11 +26,12 @@ class Feeling extends Component {
           <h2>How are you feeling today?</h2>
           <div>
               <p>Feeling?</p>
-              <input type="number"/>
-              <button>
+              <input type="number" onChange={this.setRating}/>
+              <button onClick={this.handleClick}>
                 NEXT
               </button>
           </div>
+          <pre>{JSON.stringify(this.state, null, 2)}</pre>
       </div>
     );
   }

@@ -4,6 +4,20 @@ import {withRouter} from 'react-router-dom';
 
 
 class Comments extends Component {
+  state = {
+    comments: ''
+  }
+
+  setComments = (event) => {
+    this.setState({
+      rating: event.target.value
+    })
+  }
+
+  handleClick = () => {
+    console.log('add comments');
+    
+  }
 
   render() {
 
@@ -12,8 +26,8 @@ class Comments extends Component {
         <h2>Any comments you want to leave?</h2>
           <div>
               <p>Comments</p>
-              <input type="text"/>
-              <button>
+              <input type="text" onChange={this.setComments}/>
+              <button onClick={this.handleClick}>
                 NEXT
               </button>
           </div>
