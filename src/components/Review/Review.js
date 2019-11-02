@@ -8,12 +8,11 @@ class Feeling extends Component {
   
   submitFeedback = () => {
       console.log('submitting feedback');
-      this.props.dispatch({type: 'SUBMIT_FEEDBACK'})
-    //   Axios.post('/feedback', this.props.feedbackQuestions)
-    //   .then((response) => {
-    //       console.log(response);
-    //       this.props.dispatch({type: 'SUBMIT_FEEDBACK'})
-    //   })
+      Axios.post('/feedback', this.props.feedbackQuestions)
+      .then((response) => {
+          console.log(response);
+          this.props.dispatch({type: 'SUBMIT_FEEDBACK'})
+      })
   }
 
   render() {
