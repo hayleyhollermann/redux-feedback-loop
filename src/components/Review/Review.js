@@ -4,14 +4,17 @@ import {withRouter} from 'react-router-dom';
 import Axios from 'axios';
 
 
-class Feeling extends Component {
+class Review extends Component {
   
+  // submits feedback to database
   submitFeedback = () => {
       console.log('submitting feedback');
       Axios.post('/feedback', this.props.feedbackQuestions)
       .then((response) => {
           console.log(response);
-          this.props.dispatch({type: 'SUBMIT_FEEDBACK'})
+          // clears reducer once feedback is submitted 
+          this.props.dispatch({type: 'SUBMIT_FEEDBACK'}) 
+          this.props.history.push('/thanks');
       })
   }
 
@@ -37,4 +40,4 @@ const mapReduxStateToProps= (reduxStore)=>{
   }
 
 
-export default connect(mapReduxStateToProps)(withRouter(Feeling));
+export default connect(mapReduxStateToProps)(withRouter(Review));
