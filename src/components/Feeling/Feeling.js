@@ -50,8 +50,8 @@ class Feeling extends Component {
   }
 }
 
-const mapReduxStateToProps= (reduxState)=>{
-    return reduxState;
+const mapReduxStateToProps= (reduxStore)=>{
+    return reduxStore;
   }
 
 

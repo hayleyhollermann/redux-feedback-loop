@@ -50,8 +50,8 @@ class Supported extends Component {
   }
 }
 
-const mapReduxStateToProps= (reduxState)=>{
-    return reduxState;
+const mapReduxStateToProps= (reduxStore)=>{
+    return reduxStore;
   }
 
 export default connect(mapReduxStateToProps)(withRouter(Supported));

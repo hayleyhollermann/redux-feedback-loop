@@ -21,10 +21,11 @@ const feedbackQuestions = (state = {}, action) => {
   } else if (action.type === 'COMMENTS'){
     console.log('understanding comments');
     return {...state, comments: action.payload}
-  } 
+  } else if (action.type === 'SUBMIT_FEEDBACK'){
+    return {};
+  }
   return state;
 }
-
 
 
 

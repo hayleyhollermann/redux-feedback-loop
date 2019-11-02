@@ -17,7 +17,7 @@ class Comments extends Component {
   handleClick = () => {
     console.log('add comments');
     this.props.dispatch({type: 'COMMENTS', payload: this.state.comments})
-
+    this.props.history.push('/review');
   }
 
   render() {

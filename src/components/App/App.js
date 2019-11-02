@@ -9,6 +9,7 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
+import Review from '../Review/Review'
 
 class App extends Component {
   render() {
@@ -30,11 +31,15 @@ class App extends Component {
               <li>
                 <Link to="/comments">Any comments you want to leave</Link>
               </li>
+              <li>
+                <Link to="/review">Review Feedback</Link>
+              </li>
             </ul>
           <Route exact path="/feeling" component={Feeling}/>
           <Route exact path="/understanding" component={Understanding}/>
           <Route exact path="/supported" component={Supported}/>
           <Route exact path="/comments" component={Comments}/>
+          <Route exact path="/review" component={Review}/>
         </div>
       </Router>
     );
