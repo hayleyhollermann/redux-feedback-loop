@@ -29,7 +29,7 @@ class Review extends Component {
         <p>Comments: {this.props.feedbackQuestions.comments}</p>
         <br />
         <button className="nextButton" onClick={this.submitFeedback}>Submit Feedback</button>
-        <pre>{JSON.stringify(this.props.feedbackQuestions, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(this.props.feedbackQuestions, null, 2)}</pre> */}
       </div>
     );
   }

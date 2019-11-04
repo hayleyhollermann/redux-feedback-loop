@@ -44,7 +44,7 @@ class Understanding extends Component {
                 NEXT
               </button>
           </div>
-        <pre>{JSON.stringify(this.state, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
       </div>
     );
   }
