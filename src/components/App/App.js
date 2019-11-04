@@ -19,26 +19,6 @@ class App extends Component {
         <div className="App">
           <Header />
           <br/>
-            {/* <ul>
-              <li>
-                <Link to="/feeling">How are you feeling</Link>
-              </li>
-              <li>
-                <Link to="/understanding">How well are you understanding the content</Link>
-              </li>
-              <li>
-                <Link to="/supported">How well are you being supported</Link>
-              </li>
-              <li>
-                <Link to="/comments">Any comments you want to leave</Link>
-              </li>
-              <li>
-                <Link to="/review">Review Feedback</Link>
-              </li>
-              <li>
-                <Link to="/thanks">Thank you</Link>
-              </li>
-            </ul> */}
           <Route exact path="/feeling" component={Feeling}/>
           <Route exact path="/understanding" component={Understanding}/>
           <Route exact path="/supported" component={Supported}/>

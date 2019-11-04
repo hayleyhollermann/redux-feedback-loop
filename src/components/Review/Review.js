@@ -28,7 +28,7 @@ class Review extends Component {
         <p>Support: {this.props.feedbackQuestions.support}</p>
         <p>Comments: {this.props.feedbackQuestions.comments}</p>
         <br />
-        <button onClick={this.submitFeedback}>Submit Feedback</button>
+        <button className="nextButton" onClick={this.submitFeedback}>Submit Feedback</button>
         <pre>{JSON.stringify(this.props.feedbackQuestions, null, 2)}</pre>
       </div>
     );

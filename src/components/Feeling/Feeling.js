@@ -32,7 +32,7 @@ class Feeling extends Component {
           <div>
             <p>Feeling?</p>
             {/* <input type="number" onChange={this.setRating}/> */}
-            <select onChange={this.setRating}>
+            <select className="selectBar" onChange={this.setRating}>
               <option> </option>
               <option>1</option>
               <option>2</option>
@@ -40,7 +40,7 @@ class Feeling extends Component {
               <option>4</option>
               <option>5</option>
             </select>
-            <button onClick={this.handleClick}>
+            <button className="nextButton" onClick={this.handleClick}>
               NEXT
             </button>
           </div>

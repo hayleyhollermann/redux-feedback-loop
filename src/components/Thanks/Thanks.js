@@ -15,7 +15,7 @@ class Thanks extends Component {
     return (
       <div>
         <h1>Thanks for your feedback!!</h1>
-        <button onClick={this.newFeedback}>Leave New Feedback</button>
+        <button className="nextButton" onClick={this.newFeedback}>Leave New Feedback</button>
       </div>
     );
   }
