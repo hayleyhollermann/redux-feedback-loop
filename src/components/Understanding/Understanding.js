@@ -11,7 +11,8 @@ class Understanding extends Component {
   
   setRating = (event) => {
     this.setState({
-      rating: event.target.value,
+      rating: event.target.value,    
+      // checks to see if rating has been set
       complete: true,
     })
   }
@@ -31,7 +32,6 @@ class Understanding extends Component {
         <h2>How well are you understanding the content?</h2>
           <div>
             <p>Understanding?</p>
-              {/* <input type="number" onChange={this.setRating}/> */}
             <select className="selectBar" onChange={this.setRating}>
               <option> </option>
               <option>1</option>

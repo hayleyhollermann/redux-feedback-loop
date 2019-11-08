@@ -19,6 +19,7 @@ class Supported extends Component {
   handleClick = () => {
     console.log('add rating in Support');
     this.props.dispatch({type: 'SUPPORTED', payload: this.state.rating});
+    // checks to see if rating has been set
     if (this.state.complete){
       this.props.history.push('/comments');
     }
@@ -31,7 +32,6 @@ class Supported extends Component {
         <h2>How well are you being supported?</h2>
           <div>
             <p>Support?</p>
-              {/* <input type="number" onChange={this.setRating}/> */}
             <select className="selectBar" onChange={this.setRating}>
               <option> </option>
               <option>1</option>

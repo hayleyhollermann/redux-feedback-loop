@@ -19,6 +19,7 @@ class Feeling extends Component {
   handleClick = () => {
     console.log('add rating in Feeling');
     this.props.dispatch({type: 'FEELING', payload: this.state.rating});
+    // checks to see if rating has been set
     if (this.state.complete){
       this.props.history.push('/understanding');
     }
@@ -31,7 +32,6 @@ class Feeling extends Component {
           <h2>How are you feeling today?</h2>
           <div>
             <p>Feeling?</p>
-            {/* <input type="number" onChange={this.setRating}/> */}
             <select className="selectBar" onChange={this.setRating}>
               <option> </option>
               <option>1</option>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, } from 'react-router-dom';
-
-// import { connect } from 'react-redux'; 
 import './App.css';
+
+// components
 import Header from '../Header/Header';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
